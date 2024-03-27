@@ -1,0 +1,39 @@
+app_home_index:
+    path: /
+    defaults: { _controller: AppBundle:Home:home }
+
+app_home_users_json: 
+    path: /getUsers
+    defaults: { _controller: AppBundle:Home:getUsers }
+
+app_home_usersQB_json: 
+    path: /getUsersQB
+    defaults: { _controller: AppBundle:Home:getUsersByQB }
+
+app_home_usersNQ_json: 
+    path: /getUsersNQ
+    defaults: { _controller: AppBundle:Home:getUsersByNQ }
+
+app_home_usersDQL_json: 
+    path: /getUsersDQL
+    defaults: { _controller: AppBundle:Home:getUsersByDQL }
+
+app_home_user_post: 
+    path: /user
+    defaults: { _controller: AppBundle:Home:createUser }
+    methods: ['POST']
+
+app_home_user_put: 
+    path: /user/{id}
+    defaults: { _controller: AppBundle:Home:updateUser }
+    methods: ['PUT']
+
+app_home_user_delete: 
+    path: /user/{id}
+    defaults: { _controller: AppBundle:Home:deleteUser }
+    methods: ['DELETE']
+
+soft_delete_user: 
+    path: /user/{id}/soft-delete
+    defaults: { _controller: AppBundle:Home:softDeleteUser }
+    methods: ['PUT']
